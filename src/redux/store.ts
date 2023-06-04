@@ -1,8 +1,9 @@
 import { Action, ThunkAction, configureStore } from "@reduxjs/toolkit";
+import recipesReducer from "./slices/recipeSlice";
 
-const store = configureStore({
+export const store = configureStore({
 	devTools: true,
-	reducer: {},
+	reducer: { recipesReducer },
 });
 
 export type RootState = ReturnType<typeof store.getState>;
